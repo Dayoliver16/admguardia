@@ -1,0 +1,178 @@
+/* ==========================================================================
+   1. FONTS & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../FONTES/Montserrat.Thin250.otf');
+    font-weight: 250;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../FONTES/Montserrat.Light300.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../FONTES/Montserrat.Regular400.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../FONTES/Montserrat.SemiBold600.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DE LAYOUT E SOBREPOSIÇÃO (RESOLUÇÃO DE TELA)
+   ========================================================================== */
+/* Empurra o cabeçalho, conteúdo e rodapé 240px para a direita (largura exata do menu) */
+header, main, footer {
+    padding-left: 240px;
+    box-sizing: border-box;
+}
+
+/* Em telas menores (tablets e celulares), o menu se esconde e o padding volta a zero */
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+   3. MENU LATERAL (SIDEBAR) & NAVEGAÇÃO
+   ========================================================================== */
+.side-nav.fixed {
+    width: 240px;
+    height: 100vh !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.side-nav li a:hover, 
+.collapsible-header:hover, 
+.side-nav .collapsible-body li a:hover {
+    background-color: #c2a0e9 !important;
+    color: #ffffff !important;
+}
+
+.marcaadm { border-color: #BCC2E2; }
+.coradm { background: #8e6fb3; }
+.menuadm { background: #9672be; }
+.topoadm { background: #8e6fb3; }
+.painel1 { background: #9672be; color: #ffffff;}
+.painel2 { background: #9672be; }
+
+.admin-profile-header {
+    height: 180px;
+    color: #ffffff;
+}
+.profile-avatar {
+    margin-top: 5%;
+    width: 100px;
+    height: 100px;
+}
+.profile-name {
+    margin-top: -13%;
+}
+.waves-effect {
+    color: #ffffff !important;
+    background-color: #9672be;
+}
+
+.custom-link { text-decoration: none !important; }
+.dropdown-item { color: #3f51b5 !important; }
+
+.main-navbar { background-color: #8e6fb3 !important; }
+.sub-navbar { background-color: #9672be !important; }
+.nav-logo { margin-top: 17px; margin-left: 5px; }
+.admin-breadcrumb { margin-left: 20px; }
+#timestamp { margin-right: 20px; }
+
+/* ==========================================================================
+   4. COMPONENTES DO DASHBOARD & PÁGINAS ADMINISTRATIVAS
+   ========================================================================== */
+.dashboard-card { padding: 35px; text-align: center; }
+.card-menu-item { padding: 30px; background-color: #eeeeee !important; }
+.card-icon, .card-icon-text { color: #5c6bc0 !important; }
+
+.thumb-galeria { 
+    width: 80px; 
+    height: auto; 
+    border-radius: 4px; 
+}
+.logo-parceiro { 
+    max-height: 40px; 
+    width: auto; 
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease;
+}
+.logo-parceiro:hover {
+    filter: grayscale(0%);
+}
+
+.fab-container { bottom: 45px; right: 24px; }
+.fab-main { background-color: #e91e63 !important; }
+.fab-note { background-color: #f44336 !important; }
+.fab-photo { background-color: #fbc02d !important; }
+.fab-alarm { background-color: #4caf50 !important; }
+.fab-key { background-color: #2196f3 !important; }
+.fab-tip {
+    position: fixed;
+    right: 85px;
+    padding: 0px 0.5rem;
+    text-align: right;
+    background-color: #323232;
+    border-radius: 2px;
+    color: #BCC2E2;
+    width: auto;
+}
+
+/* ==========================================================================
+   5. ESTILOS SUBSTITUTOS (ANTIGOS INLINES DO HTML)
+   ========================================================================== */
+.title-logo {
+    font-size: 1.6rem !important;
+}
+.custom-main-container {
+    width: 95%;
+    padding-top: 20px;
+}
+.custom-card {
+    padding: 20px;
+}
+.title-purple {
+    color: #8e6fb3;
+}
+.custom-select {
+    border: 1px solid #8e6fb3;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
+.main-footer { background-color: #8e6fb3 !important; }
+.footer-title { color: #ffffff !important; }
+.footer-author { font-weight: bold; }
+#credits li, #credits li a { color: white; }
+#credits li a { font-weight: bold; }
+.footer-copyright .container, .footer-copyright .container a { color: #BCC2E2; }
