@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Configurações</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="CSS/AdmG.css">
+</head>
+<body>
+
+    <ul id="slide-out" class="side-nav fixed z-depth-2 menuadm">
+        <li class="center no-padding">
+            <div class="coradm admin-profile-header">
+                <div class="row">
+                    <img class="circle responsive-img profile-avatar" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" alt="Avatar Admin" />
+                    <p class="profile-name">Administrador</p>
+                </div>
+            </div>
+        </li>
+        <li><a class="painel1 waves-effect" href="admin-dashboard.html"><b>Painel Geral</b></a></li>
+        <li>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header waves-effect white-text painel1"><b>Gerenciar Núcleos</b></div>
+                    <div class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="admin-nucleos.html">Atualizar Núcleos</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect white-text painel1"><b>Galeria de Mídias</b></div>
+                    <div class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="admin-galeria.html">Fotos e Vídeos</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header waves-effect white-text painel1"><b>Blog / Notícias</b></div>
+                    <div class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="admin-blog.html">Gerenciar Postagens</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="collapsible-header waves-effect white-text painel1"><b>Configurações do Site</b></div>
+                    <div class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text active" href="admin-configuracoes.html">Parcerias e Rodapé</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <header>
+        <nav class="main-navbar">
+            <div class="nav-wrapper">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                <span class="brand-logo center hide-on-med-and-down" style="font-size: 1.6rem;">Guardiãs das Águas</span>
+            </div>
+        </nav>
+        <nav class="sub-navbar">
+            <div class="nav-wrapper">
+                <a class="breadcrumb admin-breadcrumb" href="#!">Admin</a>
+                <a class="breadcrumb" href="#!">Configurações Gerais & Contatos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" style="width: 95%; padding-top: 20px;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card" style="padding: 20px;">
+                        <h4 style="color: #8e6fb3;">Instituições Parceiras & Redes de Contato</h4>
+                        
+                        <form class="row">
+                            <h5 class="col s12" style="color: #9672be; font-size: 1.2rem;">Contatos Institucionais (Rodapé)</h5>
+                            <div class="input-field col s12 m4">
+                                <input id="instagram" type="text" value="@guardias.aguas" class="validate">
+                                <label for="instagram">Instagram do Projeto</label>
+                            </div>
+                            <div class="input-field col s12 m4">
+                                <input id="email_inst" type="email" value="contato@guardias.com" class="validate">
+                                <label for="email_inst">E-mail de Contato</label>
+                            </div>
+                            <div class="input-field col s12 m4">
+                                <input id="tel_uteis" type="text" placeholder="Ex: IBAMA, Ouvidorias" class="validate">
+                                <label for="tel_uteis">Telefones Úteis (Denúncias Ambientais)</label>
+                            </div>
+
+                            <h5 class="col s12" style="color: #9672be; font-size: 1.2rem; margin-top: 30px;">Gerenciar Logos de Apoiadores</h5>
+                            <div class="file-field input-field col s12 m6">
+                                <div class="btn topoadm">
+                                    <span>Universidade</span>
+                                    <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Adicionar logos das IES (UFU, UFPE, UFMT...)">
+                                </div>
+                            </div>
+                            <div class="file-field input-field col s12 m6">
+                                <div class="btn topoadm">
+                                    <span>Fomento</span>
+                                    <input type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Adicionar logo do CNPq ou Ministério">
+                                </div>
+                            </div>
+
+                            <div class="col s12" style="margin-top: 20px;">
+                                <button class="btn waves-effect waves-light topoadm" type="submit">Atualizar Dados Gerais
+                                    <i class="material-icons right">check</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="JavaS/AdmG.js"></script>
+</body>
+</html>
