@@ -1,4 +1,6 @@
-/* --- Fonts --- */
+/* ==========================================================================
+   1. FONTS & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 @font-face {
     font-family: 'Montserrat';
     src: url('../FONTES/Montserrat.Thin250.otf');
@@ -24,22 +26,39 @@
     font-style: normal;
 }
 
-/* --- Ajuste Geral da Página --- */
 body {
     margin: 0;
     padding: 0;
-    background: white;
+    background: #fcfcfc;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* --- Menu Lateral (Sidebar) --- */
+/* ==========================================================================
+   2. ESTRUTURA DE LAYOUT (RESOLVE O MENU SOBREPOSTO)
+   ========================================================================== */
+/* Força o topo, o conteúdo e o rodapé a respeitar o espaço de 240px do menu */
+header, main, footer {
+    padding-left: 240px !important;
+    box-sizing: border-box;
+}
+
+/* Em ecrãs pequenos (tablets e telemóveis), o menu esconde-se e o padding volta a zero */
+@media only screen and (max-width: 992px) {
+    header, main, footer {
+        padding-left: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   3. MENU LATERAL (SIDEBAR) & NAVEGAÇÃO
+   ========================================================================== */
 .side-nav.fixed {
-    width: 240px;
+    width: 240px !important;
     height: 100vh !important;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     bottom: 0;
@@ -47,30 +66,30 @@ body {
     z-index: 999;
 }
 
-/* --- Estrutura do Conteúdo Central --- */
-header, main, footer {
-    padding-left: 240px;
-    box-sizing: border-box;
+.side-nav li a:hover, 
+.collapsible-header:hover, 
+.side-nav .collapsible-body li a:hover {
+    background-color: #c2a0e9 !important;
+    color: #ffffff !important;
 }
 
-/* --- Ajuste Responsivo para Celulares/Tablets --- */
-@media only screen and (max-width: 992px) {
-    header, main, footer {
-        padding-left: 0;
-    }
-}
+/* Cores Roxas do Sistema */
+.marcaadm { border-color: #BCC2E2; }
+.coradm { background: #8e6fb3 !important; }
+.menuadm { background: #9672be !important; }
+.topoadm { background: #8e6fb3 !important; }
 
-.marcaadm{
-    border-color: #BCC2E2;
+.painel1 { 
+    background: #9672be !important; 
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    height: 3rem !important;
+    line-height: 3rem !important;
+    padding: 0 1rem !important;
+    display: block;
 }
-/* --- Cores Customizadas do Painel --- */
-.coradm { background: #8e6fb3; }
-.menuadm { background: #9672be; }
-.topoadm { background: #8e6fb3; }
-.painel1 { background: #9672be; color: #ffffff;}
-.painel2 { background: #9672be; }
+.painel2 { background: #9672be !important; }
 
-/* --- Perfil do Admin --- */
 .admin-profile-header {
     height: 180px;
     color: #ffffff;
@@ -85,46 +104,48 @@ header, main, footer {
 }
 .waves-effect {
     color: #ffffff !important;
-    background-color: #9672be;
 }
-/* --- Links e Dropdowns --- */
+
 .custom-link { text-decoration: none !important; }
 .dropdown-item { color: #3f51b5 !important; }
 
-/* --- Navbars --- */
 .main-navbar { background-color: #8e6fb3 !important; }
 .sub-navbar { background-color: #9672be !important; }
 .nav-logo { margin-top: 17px; margin-left: 5px; }
-.admin-breadcrumb { margin-left: 20px; }
-#timestamp { margin-right: 20px; }
 
-/* --- Cards do Dashboard --- */
-.dashboard-card { padding: 35px; text-align: center; }
-.card-menu-item { padding: 30px; background-color: #eeeeee !important; }
-.card-icon, .card-icon-text { color: #5c6bc0 !important; }
-
-/* --- Botão Flutuante (FAB) --- */
-.fab-container { bottom: 45px; right: 24px; }
-.fab-main { background-color: #e91e63 !important; }
-.fab-note { background-color: #f44336 !important; }
-.fab-photo { background-color: #fbc02d !important; }
-.fab-alarm { background-color: #4caf50 !important; }
-.fab-key { background-color: #2196f3 !important; }
-.fab-tip {
-    position: fixed;
-    right: 85px;
-    padding: 0px 0.5rem;
-    text-align: right;
-    background-color: #323232;
-    border-radius: 2px;
-    color: #BCC2E2;
-    width: auto;
+/* ==========================================================================
+   4. SEÇÃO DE FOTOS & INPUTS
+   ========================================================================== */
+.custom-main-container {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.custom-card {
+    padding: 20px;
+}
+.title-purple {
+    color: #8e6fb3 !important;
 }
 
-/* --- Rodapé (Footer) --- */
-.main-footer { background-color: #8e6fb3 !important; }
-.footer-title { color: #ffffff !important; }
-.footer-author { font-weight: bold; }
-#credits li, #credits li a { color: white; }
-#credits li a { font-weight: bold; }
-.footer-copyright .container, .footer-copyright .container a { color: #BCC2E2; }
+/* Customização dos inputs do Materialize para o tema roxo */
+.input-field input[type=text]:focus + label {
+    color: #8e6fb3 !important;
+}
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #8e6fb3 !important;
+    box-shadow: 0 1px 0 0 #8e6fb3 !important;
+}
+/*SEÇÃO ALTERAR FOTOS*/
+
+/* Customização dos inputs do Materialize para o seu tema roxo */
+.input-field input[type=text]:focus + label {
+    color: #8e6fb3 !important;
+}
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #8e6fb3 !important;
+    box-shadow: 0 1px 0 0 #8e6fb3 !important;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    margin-right: 0 !important;
+}

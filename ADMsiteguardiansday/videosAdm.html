@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Vídeos</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="CSS/AdmG.css">
+</head>
+
+<body>
+
+    <ul id="slide-out" class="side-nav fixed z-depth-2 menuadm">
+        <li class="center no-padding">
+            <div class="coradm admin-profile-header">
+                <div class="row">
+                    <img class="circle responsive-img profile-avatar" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" alt="Avatar Admin" />
+                    <p class="profile-name">Guardians das águas - ADM</p>
+                </div>
+            </div>
+        </li>
+
+        <li id="dash_dashboard">
+            <a class="painel1 waves-effect white-text" href="AdmG.html">Painel Geral</a>
+        </li>
+        
+        <li>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li id="dash_users">
+                    <div id="dash_users_header" class="collapsible-header waves-effect white-text painel1"><b>Gerenciar Núcleos</b></div>
+                    <div id="dash_users_body" class="collapsible-body painel2">
+                        <ul>
+                            <li id="users_seller"><a class="waves-effect custom-link white-text" href="#!">Minas Gerais</a></li>
+                            <li id="users_customer_ce"><a class="waves-effect custom-link white-text" href="#!">Ceará</a></li>
+                            <li id="users_customer_se"><a class="waves-effect custom-link white-text" href="#!">Sergipe</a></li>
+                            <li id="users_customer_pe"><a class="waves-effect custom-link white-text" href="#!">Pernambuco</a></li>
+                            <li id="users_customer_mt"><a class="waves-effect custom-link white-text" href="#!">Mato Grosso</a></li>
+                            <li id="users_customer_rs"><a class="waves-effect custom-link white-text" href="#!">Rio Grande do Sul</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_products">
+                    <div id="dash_products_header" class="collapsible-header waves-effect white-text painel1"><b>Galeria de Mídias</b></div>
+                    <div id="dash_products_body" class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="fotosAdm.html">Fotos</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="videosAdm.html">Vídeos</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_categories">
+                    <div id="dash_categories_header" class="collapsible-header waves-effect white-text painel1"><b>Blog / Notícias</b></div>
+                    <div id="dash_categories_body" class="collapsible-body painel2">
+                        <ul>
+                            <li id="categories_category"><a class="waves-effect custom-link white-text" href="novoPostAdm.html">+ Novo post</a></li>
+                            <li id="categories_sub_category"><a class="waves-effect custom-link white-text" href="alterarPostAdm.html">Alterar post</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_settings">
+                    <div id="dash_settings_header" class="collapsible-header waves-effect white-text painel1"><b>Configurações do site</b></div>
+                    <div id="dash_settings_body" class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="parceriasAdm.html">Parcerias</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="contatosUteisAdm.html">Contatos úteis</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="linksRodapeAdm.html">Links de Rodapé</a></li>
+                            <li><a class="whites-effect custom-link white-text" href="logosAdm.html">Logos</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <header>
+        <ul class="dropdown-content" id="user_dropdown">
+            <li><a class="dropdown-item" href="#!">Salvar</a></li>
+            <li><a class="dropdown-item" href="#!">Reset</a></li>
+            <li><a class="dropdown-item" href="#!">Sair</a></li>
+        </ul>
+
+        <nav class="main-navbar" role="navigation">
+            <div class="nav-wrapper">
+                <a data-activates="slide-out" class="button-collapse" href="#!">
+                    <img class="nav-logo" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" alt="Logo" />
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a class='right dropdown-button' href='#!' data-activates='user_dropdown'>
+                            <i class='material-icons'>account_circle</i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <nav class="sub-navbar">
+            <div class="nav-wrapper">
+                <a class="breadcrumb admin-breadcrumb" href="#!">Admin</a>
+                <a class="breadcrumb" href="#!">Galeria de Vídeos</a>
+                <div id="timestamp" class="right"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container custom-main-container">
+        
+        <div class="row">
+            <div class="col s12">
+                <h4 class="title-purple"><b>Gerenciar Galeria de Vídeos</b></h4>
+                <p>Adicione links do YouTube/Vimeo, visualize ou remova os vídeos do site.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div class="card custom-card">
+                    <span class="card-title left-align"><b>Adicionar Novo Vídeo</b></span>
+                    
+                    <form action="#" class="row row-cards-inner">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix" style="color: #8e6fb3;">link</i>
+                            <input id="url_video" type="text" class="validate" placeholder="Ex: https://www.youtube.com/watch?v=...">
+                            <label for="url_video">Link do Vídeo (YouTube / Vimeo)</label>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <input id="titulo_video" type="text" class="validate">
+                            <label for="titulo_video">Título / Legenda do Vídeo</label>
+                        </div>
+
+                        <div class="col s12 right-align" style="margin-top: 15px;">
+                            <button class="btn waves-effect waves-light coradm" type="submit">
+                                Adicionar Vídeo <i class="material-icons right">video_call</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <h5 class="title-purple" style="margin-bottom: 20px;"><b>Vídeos no Site</b></h5>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <div class="video-container" style="height: 200px;">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-size: 1.1rem; line-height: 1.3rem;"><b>Projeto Guardiões em Ação</b></span>
+                        <p style="margin-top: 10px;"><b>Data:</b> 28/06/2026</p>
+                    </div>
+                    <div class="card-action row row-cards-inner" style="margin-bottom: 0;">
+                        <div class="col s6">
+                            <a href="#!" class="btn-flat waves-effect blue-text custom-link">Editar</a>
+                        </div>
+                        <div class="col s6 right-align">
+                            <a href="#!" class="btn-flat waves-effect red-text custom-link">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <div class="video-container" style="height: 200px;">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4" style="font-size: 1.1rem; line-height: 1.3rem;"><b>Conscientização de Recursos Hídricos</b></span>
+                        <p style="margin-top: 10px;"><b>Data:</b> 10/04/2026</p>
+                    </div>
+                    <div class="card-action row row-cards-inner" style="margin-bottom: 0;">
+                        <div class="col s6">
+                            <a href="#!" class="btn-flat waves-effect blue-text custom-link">Editar</a>
+                        </div>
+                        <div class="col s6 right-align">
+                            <a href="#!" class="btn-flat waves-effect red-text custom-link">Excluir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="JavaS/AdmG.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+</body>
+
+</html>

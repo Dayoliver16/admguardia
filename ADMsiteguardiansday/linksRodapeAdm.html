@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Links do Rodapé</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="CSS/AdmG.css">
+</head>
+
+<body>
+
+    <ul id="slide-out" class="side-nav fixed z-depth-2 menuadm">
+        <li class="center no-padding">
+            <div class="coradm admin-profile-header">
+                <div class="row">
+                    <img class="circle responsive-img profile-avatar" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" alt="Avatar Admin" />
+                    <p class="profile-name">Guardians das águas - ADM</p>
+                </div>
+            </div>
+        </li>
+
+        <li id="dash_dashboard">
+            <a class="painel1 waves-effect white-text" href="AdmG.html">Painel Geral</a>
+        </li>
+        
+        <li>
+            <ul class="collapsible" data-collapsible="accordion">
+                <li id="dash_users">
+                    <div id="dash_users_header" class="collapsible-header waves-effect white-text painel1"><b>Gerenciar Núcleos</b></div>
+                    <div id="dash_users_body" class="collapsible-body painel2">
+                        <ul>
+                            <li id="users_seller"><a class="waves-effect custom-link white-text" href="#!">Minas Gerais</a></li>
+                            <li id="users_customer_ce"><a class="waves-effect custom-link white-text" href="#!">Ceará</a></li>
+                            <li id="users_customer_se"><a class="waves-effect custom-link white-text" href="#!">Sergipe</a></li>
+                            <li id="users_customer_pe"><a class="waves-effect custom-link white-text" href="#!">Pernambuco</a></li>
+                            <li id="users_customer_mt"><a class="waves-effect custom-link white-text" href="#!">Mato Grosso</a></li>
+                            <li id="users_customer_rs"><a class="waves-effect custom-link white-text" href="#!">Rio Grande do Sul</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_products">
+                    <div id="dash_products_header" class="collapsible-header waves-effect white-text painel1"><b>Galeria de Mídias</b></div>
+                    <div id="dash_products_body" class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="fotosAdm.html">Fotos</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="videosAdm.html">Vídeos</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_categories">
+                    <div id="dash_categories_header" class="collapsible-header waves-effect white-text painel1"><b>Blog / Notícias</b></div>
+                    <div id="dash_categories_body" class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="novoPostAdm.html">+ Novo post</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="alterarPostAdm.html">Alterar post</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li id="dash_settings">
+                    <div id="dash_settings_header" class="collapsible-header waves-effect white-text painel1"><b>Configurações do site</b></div>
+                    <div id="dash_settings_body" class="collapsible-body painel2">
+                        <ul>
+                            <li><a class="waves-effect custom-link white-text" href="parceriasAdm.html">Parcerias</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="contatosUteisAdm.html">Contatos úteis</a></li>
+                            <li><a class="waves-effect custom-link white-text" href="linksRodapeAdm.html">Links de Rodapé</a></li>
+                            <li><a class="whites-effect custom-link white-text" href="logosAdm.html">Logos</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <header>
+        <ul class="dropdown-content" id="user_dropdown">
+            <li><a class="dropdown-item" href="#!">Salvar</a></li>
+            <li><a class="dropdown-item" href="#!">Reset</a></li>
+            <li><a class="dropdown-item" href="#!">Sair</a></li>
+        </ul>
+
+        <nav class="main-navbar" role="navigation">
+            <div class="nav-wrapper">
+                <a data-activates="slide-out" class="button-collapse" href="#!">
+                    <img class="nav-logo" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" alt="Logo" />
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a class='right dropdown-button' href='#!' data-activates='user_dropdown'>
+                            <i class='material-icons'>account_circle</i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <nav class="sub-navbar">
+            <div class="nav-wrapper">
+                <a class="breadcrumb admin-breadcrumb" href="#!">Admin</a>
+                <a class="breadcrumb" href="#!">Configurações</a>
+                <a class="breadcrumb" href="#!">Links de Rodapé</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container custom-main-container">
+        <div class="row">
+            <div class="col s12">
+                <h4 class="title-purple"><b>Gerenciar Links do Rodapé</b></h4>
+                <p>Atualize os endereços das redes sociais e páginas institucionais exibidas no final do site.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div class="card custom-card">
+                    <form action="#" class="row row-cards-inner">
+                        
+                        <div class="col s12" style="margin-bottom: 20px;">
+                            <h5 class="title-purple" style="font-size: 1.3rem;"><b>Redes Sociais</b></h5>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix" style="color: #8e6fb3;">link</i>
+                            <input id="link_instagram" type="text" class="validate" value="https://instagram.com/guardiansdasaguas">
+                            <label for="link_instagram">Instagram</label>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix" style="color: #8e6fb3;">link</i>
+                            <input id="link_facebook" type="text" class="validate" value="https://facebook.com/guardiansdasaguas">
+                            <label for="link_facebook">Facebook</label>
+                        </div>
+
+                        <div class="col s12" style="margin-top: 20px; margin-bottom: 20px;">
+                            <h5 class="title-purple" style="font-size: 1.3rem;"><b>Links Institucionais</b></h5>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix" style="color: #8e6fb3;">pages</i>
+                            <input id="link_sobre" type="text" class="validate" value="sobre.html">
+                            <label for="link_sobre">Página "Quem Somos / Sobre"</label>
+                        </div>
+
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix" style="color: #8e6fb3;">gavel</i>
+                            <input id="link_termos" type="text" class="validate" value="termos.html">
+                            <label for="link_termos">Termos de Uso e Privacidade</label>
+                        </div>
+
+                        <div class="col s12 right-align" style="margin-top: 30px;">
+                            <button class="btn waves-effect waves-light coradm" type="submit">
+                                Salvar Links <i class="material-icons right">save</i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="JavaS/AdmG.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Ativa o botão de colapso do menu lateral para mobile
+            $('.button-collapse').sideNav();
+            
+            // Ativa os submenus sanfona (collapsible) da lista lateral
+            $('.collapsible').collapsible();
+            
+            // Ativa o botão de perfil dropdown
+            $('.dropdown-button').dropdown();
+        });
+    </script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+</body>
+
+</html>
